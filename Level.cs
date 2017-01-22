@@ -1,24 +1,51 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pacman_DeepMind
 {
+    enum DIRECTION
+    {
+        STOP,
+        UP,
+        DOWN,
+        RIGHT,
+        LEFT
+    }
+
     class Level
     {
+        public int pX, pY;
+
         private string _name;
         private char[,] _board;
         private int x, y;
-        //private int _maxScore;
+        private int _maxScore;
 
         public Level(string name)
         {
             _name = "levels/" + name + ".txt";
 
             _GetLevelInfo();
+        }
+
+        public int GetScore()
+        {
+            return _maxScore;
+        }
+
+        public void SetPac(int x, int y)
+        {
+
+        }
+
+        public void CheckScore(int x, int y)
+        {
+
+        }
+
+        public void ClearTile(int x, int y)
+        {
+
         }
 
         public void Draw()
@@ -33,6 +60,16 @@ namespace Pacman_DeepMind
             }
         }
 
+        public DIRECTION Check(int x, int y, DIRECTION dir)
+        {
+            return dir;
+        }
+
+        public char GetContent(int x, int y)
+        {
+             return _board[x, y];
+        }
+
         private void _GetLevelInfo()
         {
             string line;
@@ -42,6 +79,8 @@ namespace Pacman_DeepMind
             string[] coords = line.Split();
             x = int.Parse(coords[0]);
             y = int.Parse(coords[1]);
+            pX = int.Parse(coords[2]);
+            pY = int.Parse(coords[3]);
 
             _board = new char[x, y];
 
@@ -52,6 +91,8 @@ namespace Pacman_DeepMind
                 foreach (char c in line)
                 {
                     _board[i, counter] = c;
+                    if (_board[i, counter] == '+')
+                        _maxScore++;
                     counter++;
                 }
             }
