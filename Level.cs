@@ -24,26 +24,60 @@ namespace Pacman_DeepMind
 
         private void _GetLevelInfo()
         {
-            if(File.Exists(_name))
+            /*
+                if(File.Exists(_name))
+                {
+                    TextReader data = File.OpenText(_name);
+                    string levelSize = data.ReadLine();
+                    string[] coords = levelSize.Split();
+                    int x = int.Parse(coords[0]);
+                    int y = int.Parse(coords[1]);
+                    //Console.WriteLine(x + "\t" + y);
+
+                    _board = new char[x, y];
+
+                    string line = File.ReadAllText(_name);
+                    Console.WriteLine("\n" + line + "\n");
+
+
+                }
+                else
+                {
+                    Console.WriteLine("Error! Level file doesn't exist!");
+                }
+            */
+            string line;
+
+            StreamReader data = new StreamReader(_name);
+            line = data.ReadLine();
+            string[] coords = line.Split();
+            int x = int.Parse(coords[0]);
+            int y = int.Parse(coords[1]);
+            //Console.WriteLine(x + "\t" + y);
+
+            _board = new char[x, y];
+
+            for (int i = 0; i < x; i++)
             {
-                TextReader data = File.OpenText(_name);
-                string levelSize = data.ReadLine();
-                string[] coords = levelSize.Split();
-                int x = int.Parse(coords[0]);
-                int y = int.Parse(coords[1]);
-                //Console.WriteLine(x + "\t" + y);
-                
-                _board = new char[x, y];
-
-                string line = File.ReadAllText(_name);
-                Console.WriteLine("\n" + line + "\n");
-
-
+                int counter = 0;
+                line = data.ReadLine();
+                foreach (char c in line)
+                {
+                    _board[i, counter] = c;
+                    counter++;
+                }
             }
-            else
+
+            //Debug print board
+            for (int i = 0; i < x; i++)
             {
-                Console.WriteLine("Error! Level file doesn't exist!");
+                for (int j = 0; j < y; j++)
+                {
+                    Console.Write(_board[i, j]);
+                }
+                Console.Write("\n");
             }
+
         }
     }
 }
