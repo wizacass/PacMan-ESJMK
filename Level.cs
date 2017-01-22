@@ -11,6 +11,7 @@ namespace Pacman_DeepMind
     {
         private string _name;
         private char[,] _board;
+        private int x, y;
         //private int _maxScore;
 
         public Level(string name)
@@ -20,40 +21,27 @@ namespace Pacman_DeepMind
             _GetLevelInfo();
         }
 
-
+        public void Draw()
+        {
+            for (int i = 0; i < x; i++)
+            {
+                for (int j = 0; j < y; j++)
+                {
+                    Console.Write(_board[i, j]);
+                }
+                Console.Write("\n");
+            }
+        }
 
         private void _GetLevelInfo()
         {
-            /*
-                if(File.Exists(_name))
-                {
-                    TextReader data = File.OpenText(_name);
-                    string levelSize = data.ReadLine();
-                    string[] coords = levelSize.Split();
-                    int x = int.Parse(coords[0]);
-                    int y = int.Parse(coords[1]);
-                    //Console.WriteLine(x + "\t" + y);
-
-                    _board = new char[x, y];
-
-                    string line = File.ReadAllText(_name);
-                    Console.WriteLine("\n" + line + "\n");
-
-
-                }
-                else
-                {
-                    Console.WriteLine("Error! Level file doesn't exist!");
-                }
-            */
             string line;
 
             StreamReader data = new StreamReader(_name);
             line = data.ReadLine();
             string[] coords = line.Split();
-            int x = int.Parse(coords[0]);
-            int y = int.Parse(coords[1]);
-            //Console.WriteLine(x + "\t" + y);
+            x = int.Parse(coords[0]);
+            y = int.Parse(coords[1]);
 
             _board = new char[x, y];
 
@@ -67,17 +55,7 @@ namespace Pacman_DeepMind
                     counter++;
                 }
             }
-
-            //Debug print board
-            for (int i = 0; i < x; i++)
-            {
-                for (int j = 0; j < y; j++)
-                {
-                    Console.Write(_board[i, j]);
-                }
-                Console.Write("\n");
-            }
-
+            data.Close();
         }
     }
 }

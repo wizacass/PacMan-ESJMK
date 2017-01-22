@@ -8,6 +8,8 @@ namespace Pacman_DeepMind
 {
     class Game
     {
+        Level level;
+
         public Game()
         {
             GameStart();
@@ -17,9 +19,9 @@ namespace Pacman_DeepMind
 
         private void GameStart()
         {
-            Console.WriteLine("Pacman Game");
+            Console.WriteLine("\tPacman Game");
 
-            Level level = new Level("level1");
+            level = new Level("level1");
         }
 
         private void GameLoop()
@@ -27,7 +29,7 @@ namespace Pacman_DeepMind
             var isWorking = true;
             while(isWorking)
             {
-
+                level.Draw();
 
                 isWorking = false;
             }
