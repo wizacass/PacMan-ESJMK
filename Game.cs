@@ -22,6 +22,10 @@ namespace Pacman_DeepMind
 
         public Game()
         {
+            Console.Title = "Pacman AI Project";
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.BackgroundColor = ConsoleColor.White;
+
             GameStart();
             GameLoop();
             GameEnd();
@@ -58,7 +62,7 @@ namespace Pacman_DeepMind
                 level.Draw();
 
 
-                Thread.Sleep(100);
+                Thread.Sleep(250);
 
                 if(_score == _maxScore)
                 {
