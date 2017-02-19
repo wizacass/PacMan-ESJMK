@@ -3,13 +3,16 @@ using System.IO;
 
 namespace Pacman_DeepMind
 {
-    class Level
+    public class Level
     {
         public int pX, pY;
 
         private string _name;
-        private char[,] _board;
-        private int x, y;
+        public char[,] _board;
+
+        public int x { get; private set; }
+        public int y { get; private set; }
+ 
         private int _maxScore;
 
         public Level(string name)

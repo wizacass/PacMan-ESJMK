@@ -42,6 +42,7 @@ namespace Pacman_DeepMind
 
         private void GameLoop()
         {
+            SimpleAI ai = new SimpleAI(level);
             var isWorking = true;
             while(isWorking)
             {
@@ -49,26 +50,35 @@ namespace Pacman_DeepMind
                 Console.WriteLine("\tPacman Deep Mind");
                 Console.WriteLine("   Score: " + _score + "\tMax: " + _maxScore);
 
-                pacman.Input();
+                //pacman.Input();
+                isWorking = ai.MoveNext();
 
-                pacman.SetDir(level.Check(pacman.getX(), pacman.getY(), pacman.GetDir()));
-                pacman.Movement();
+                //pacman.SetDir(level.Check(pacman.getX(), pacman.getY(), pacman.GetDir()));
+                //pacman.Movement();
 
-                _score = level.CheckScore(pacman.getX(), pacman.getY(), _score);
-                level.ClearTile(pacman.getX(), pacman.getY());
-                level.SetPac(pacman.getX(), pacman.getY());
+                Tuple<int, int> coords = ai.Current;
 
-                pacman.Update();
+                SetData(coords.Item1, coords.Item2);
+                //SetData(pacman.getX(), pacman.getY());
+
+                //pacman.Update();
                 level.Draw();
 
 
-                Thread.Sleep(250);
+                Thread.Sleep(1000);
 
                 if(_score == _maxScore)
                 {
                     isWorking = false;
                 }
             }
+        }
+
+        private void SetData(int x, int y)
+        {
+            _score = level.CheckScore(x, y, _score);
+            level.ClearTile(x, y);
+            level.SetPac(x, y);
         }
 
         private void GameEnd()
