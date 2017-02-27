@@ -2,12 +2,12 @@
 
 namespace Pacman_DeepMind
 {
-    class Pacman
+    class Ghost
     {
         private int _x, _y, _xx, _yy;
         public DIRECTION _dir;
 
-        public Pacman(int x, int y)
+        public Ghost(int x, int y)
         {
             _x = x;
             _y = y;
@@ -16,27 +16,28 @@ namespace Pacman_DeepMind
             _dir = DIRECTION.STOP;
         }
 
+    //debug
         public void Input()
         {
-            if(Console.KeyAvailable)
+            if (Console.KeyAvailable)
             {
                 char c = Console.ReadKey().KeyChar;
 
                 switch (c)
                 {
-                    case 'w':
+                    case 'i':
                         _dir = DIRECTION.UP;
                         break;
-                    case 'a':
+                    case 'j':
                         _dir = DIRECTION.LEFT;
                         break;
-                    case 's':
+                    case 'k':
                         _dir = DIRECTION.DOWN;
                         break;
-                    case 'd':
+                    case 'l':
                         _dir = DIRECTION.RIGHT;
                         break;
-                    case 'x':
+                    case 'm':
                         _dir = DIRECTION.STOP;
                         break;
                     default:

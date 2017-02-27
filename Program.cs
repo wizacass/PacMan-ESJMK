@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Pacman_DeepMind
+﻿namespace Pacman_DeepMind
 {
+    using System;
+
     class Program
     {
         static void Main(string[] args)
