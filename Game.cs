@@ -16,6 +16,8 @@ namespace Pacman_DeepMind
     {
         Level level;
         Pacman pacman;
+        Ghost ghost;
+        SimpleAI ai;
 
         private int _score = 0;
         private int _maxScore;
@@ -35,6 +37,8 @@ namespace Pacman_DeepMind
         {
             level = new Level("level1");
             pacman = new Pacman(level.pX, level.pY);
+            ghost = new Ghost(level.gX, level.gY);
+            ai = new SimpleAI(level);
 
             _maxScore = level.GetScore();
 
@@ -50,21 +54,28 @@ namespace Pacman_DeepMind
                 Console.WriteLine("\tPacman Deep Mind");
                 Console.WriteLine("   Score: " + _score + "\tMax: " + _maxScore);
 
-                //pacman.Input();
+            //TODO fix conflict between inputs
+                pacman.Input();
+                ghost.Input();
+
+                pacman.SetDir(level.Check(pacman.getX(), pacman.getY(), pacman.GetDir()));
+                pacman.Movement();
+
+                ghost.SetDir(level.Check(ghost.getX(), ghost.getY(), ghost.GetDir()));
+                ghost.Movement();
+
+                SetData(pacman.getX(), pacman.getY(), ghost.getX(), ghost.getY());
+
+                pacman.Update();
+                ghost.Update();
+
+                /*
                 isWorking = ai.MoveNext();
-
-                //pacman.SetDir(level.Check(pacman.getX(), pacman.getY(), pacman.GetDir()));
-                //pacman.Movement();
-
                 Tuple<int, int> coords = ai.Current;
-
                 SetData(coords.Item1, coords.Item2);
-                //SetData(pacman.getX(), pacman.getY());
+                */
 
-                //pacman.Update();
                 level.Draw();
-
-
                 Thread.Sleep(50);
 
                 if(_score == _maxScore)
@@ -74,11 +85,12 @@ namespace Pacman_DeepMind
             }
         }
 
-        private void SetData(int x, int y)
+        private void SetData(int pX, int pY, int gX, int gY)
         {
-            _score = level.CheckScore(x, y, _score);
-            level.ClearTile(x, y);
-            level.SetPac(x, y);
+            _score = level.CheckScore(pX, pY, _score);
+
+            level.SetPac(pX, pY);
+            level.SetGhost(gX, gY, ghost.GetDir());
         }
 
         private void GameEnd()

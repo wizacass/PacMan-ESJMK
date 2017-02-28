@@ -5,7 +5,8 @@ namespace Pacman_DeepMind
 {
     public class Level
     {
-        public int pX, pY;
+        public int pX, pY; //Pacman spawn
+        public int gX, gY; //Ghost spawn
 
         private string _name;
         public char[,] _board;
@@ -30,6 +31,57 @@ namespace Pacman_DeepMind
         public void SetPac(int x, int y)
         {
             _board[x, y] = 'C';
+            if (_board[x - 1, y] == 'C')
+            {
+                _board[x - 1, y] = ' ';
+            }
+            if (_board[x + 1, y] == 'C')
+            {
+                _board[x + 1, y] = ' ';
+            }
+            if (_board[x, y - 1] == 'C')
+            {
+                _board[x, y - 1] = ' ';
+            }
+            if (_board[x, y + 1] == 'C')
+            {
+                _board[x, y + 1] = ' ';
+            }
+        }
+
+    //TODO: fix food trail
+        public void SetGhost(int x, int y, DIRECTION dir)
+        {
+            char t;
+            switch (dir)
+            {
+                case DIRECTION.STOP:
+                    _board[x, y] = 'G';
+                    break;
+                case DIRECTION.UP:
+                    t = _board[x - 1, y];
+                    _board[x, y] = t;
+                    _board[x - 1, y] = 'G';
+                    break;
+                case DIRECTION.DOWN:
+                    t = _board[x + 1, y];
+                    _board[x, y] = t;
+                    _board[x + 1, y] = 'G';
+                    break;
+                case DIRECTION.RIGHT:
+                    t = _board[x, y + 1];
+                    _board[x, y] = t;
+                    _board[x, y + 1] = 'G';
+                    break;
+                case DIRECTION.LEFT:
+                    t = _board[x, y - 1];
+                    _board[x, y] = t;
+                    _board[x, y - 1] = 'G';
+                    break;
+                default:
+                    _board[x, y] = 'G';
+                    break;
+            }
         }
 
         public int CheckScore(int x, int y, int score)
@@ -118,6 +170,8 @@ namespace Pacman_DeepMind
             y = int.Parse(coords[1]);
             pX = int.Parse(coords[2]);
             pY = int.Parse(coords[3]);
+            gX = int.Parse(coords[4]);
+            gY = int.Parse(coords[5]);
 
             _board = new char[x, y];
 
