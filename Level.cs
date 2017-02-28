@@ -10,6 +10,7 @@ namespace Pacman_DeepMind
 
         private string _name;
         public char[,] _board;
+        public bool[,] isWalkable;
 
         public int x { get; private set; }
         public int y { get; private set; }
@@ -159,6 +160,20 @@ namespace Pacman_DeepMind
              return _board[x, y];
         }
 
+        public void ClearWalkable()
+        {
+            for(int i = 0; i < x; i++)
+            {
+                for(int j = 0; j < y; j++)
+                {
+                    if(_board[x, y] != '#')
+                    {
+                        isWalkable[x, y] = true;
+                    }
+                }
+            }
+        }
+
         private void _GetLevelInfo()
         {
             string line;
@@ -174,6 +189,7 @@ namespace Pacman_DeepMind
             gY = int.Parse(coords[5]);
 
             _board = new char[x, y];
+            isWalkable = new bool[x, y];
 
             for (int i = 0; i < x; i++)
             {
@@ -183,7 +199,15 @@ namespace Pacman_DeepMind
                 {
                     _board[i, counter] = c;
                     if (_board[i, counter] == '+')
+                    {
                         _maxScore++;
+                        isWalkable[i, counter] = true;
+                    }
+                    else
+                    {
+                        isWalkable[i, counter] = false;
+                    }   
+                        
                     counter++;
                 }
             }

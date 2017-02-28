@@ -5,11 +5,11 @@ namespace Pacman_DeepMind
 {
     public enum DIRECTION
     {
-        STOP,
         UP,
         DOWN,
         RIGHT,
-        LEFT
+        LEFT,
+        STOP
     }
 
     class Game
@@ -18,6 +18,7 @@ namespace Pacman_DeepMind
         Pacman pacman;
         Ghost ghost;
         SimpleAI ai;
+        PathFinding path;
 
         private int _score = 0;
         private int _maxScore;
@@ -35,10 +36,11 @@ namespace Pacman_DeepMind
 
         private void GameStart()
         {
-            level = new Level("level1");
-            pacman = new Pacman(level.pX, level.pY);
-            ghost = new Ghost(level.gX, level.gY);
-            ai = new SimpleAI(level);
+            level   = new Level("level1");
+            pacman  = new Pacman(level.pX, level.pY);
+            ghost   = new Ghost(level.gX, level.gY);
+            ai      = new SimpleAI(level);
+            path    = new PathFinding(level);
 
             _maxScore = level.GetScore();
 
@@ -56,11 +58,12 @@ namespace Pacman_DeepMind
 
             //TODO fix conflict between inputs
                 pacman.Input();
-                ghost.Input();
+                //ghost.Input();
 
                 pacman.SetDir(level.Check(pacman.getX(), pacman.getY(), pacman.GetDir()));
                 pacman.Movement();
 
+                ghost.SetDir(path.FindDir(pacman.getX(), pacman.getY(), ghost.getX(), ghost.getY(), pacman.GetDir()));
                 ghost.SetDir(level.Check(ghost.getX(), ghost.getY(), ghost.GetDir()));
                 ghost.Movement();
 
@@ -76,9 +79,14 @@ namespace Pacman_DeepMind
                 */
 
                 level.Draw();
-                Thread.Sleep(50);
+                Thread.Sleep(500);
 
                 if(_score == _maxScore)
+                {
+                    isWorking = false;
+                }
+
+                if(pacman.getX() == ghost.getX() && pacman.getY() == ghost.getY())
                 {
                     isWorking = false;
                 }
