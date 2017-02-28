@@ -4,15 +4,7 @@
     using System.Collections;
     using System.Collections.Generic;
 
-    public enum Directions
-    {
-
-        Left,
-        Up,
-        Right,
-        Down
-
-    }
+    using Genetic;
 
     public class SimpleAI : IEnumerator<Tuple<int, int>>
     {
@@ -39,12 +31,15 @@
         {
             //const int MoveLimit = 10;
 
-            Directions current = Directions.Left;
+            Directions current = Directions.Right;
             //Directions? comeFrom = null;
             bool moveFound = false;
             bool canMove;
 
             int moveCount = 0;
+
+            Random rnd = new Random();
+            int rndDir;
 
             do
             {
@@ -57,7 +52,9 @@
 
                         if (!canMove)
                         {
-                            current = Directions.Up;
+                            rndDir = rnd.Next(0, 4);
+                            current = (Directions)rndDir;     
+                            //current = Directions.Up;
                         }
                         else
                         {
@@ -71,7 +68,9 @@
 
                         if (!canMove)
                         {
-                            current = Directions.Right;
+                            rndDir = rnd.Next(0, 4);
+                            current = (Directions)rndDir;
+                            //current = Directions.Right;
                         }
                         else
                         {
@@ -85,7 +84,9 @@
 
                         if (!canMove)
                         {
-                            current = Directions.Down;
+                            rndDir = rnd.Next(0, 4);
+                            current = (Directions)rndDir;
+                            //current = Directions.Down;
                         }
                         else
                         {
@@ -99,7 +100,9 @@
 
                         if (!canMove)
                         {
-                            current = Directions.Left;
+                            rndDir = rnd.Next(0, 4);
+                            current = (Directions)rndDir;
+                            //current = Directions.Left;
                         }
                         else
                         {

@@ -65,7 +65,7 @@ namespace Pacman_DeepMind
                 level.Draw();
 
 
-                Thread.Sleep(1000);
+                Thread.Sleep(50);
 
                 if(_score == _maxScore)
                 {
