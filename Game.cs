@@ -66,7 +66,7 @@ namespace Pacman_DeepMind
                 ghost.SetDir(path.FindDir(pacman.getX(), pacman.getY(), ghost.getX(), ghost.getY(), pacman.GetDir()));
                 ghost.SetDir(level.Check(ghost.getX(), ghost.getY(), ghost.GetDir()));
                 ghost.Movement();
-
+                
                 SetData(pacman.getX(), pacman.getY(), ghost.getX(), ghost.getY());
 
                 pacman.Update();
