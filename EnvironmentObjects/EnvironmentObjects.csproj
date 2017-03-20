@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2C31DD5D-B3AB-479D-AFC9-6905BEFF6FF3}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{18081514-D242-472A-9B37-13CA46057E5F}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pacman_DeepMind</RootNamespace>
-    <AssemblyName>Pacman DeepMind</AssemblyName>
+    <RootNamespace>EnvironmentObjects</RootNamespace>
+    <AssemblyName>EnvironmentObjects</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -36,30 +33,8 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\Converter.cs" />
-    <Compile Include="Extensions\Logger.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Ghost.cs" />
-    <Compile Include="Level.cs" />
-    <Compile Include="Node.cs" />
-    <Compile Include="Pacman.cs" />
-    <Compile Include="PathFinding.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Board.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleAI.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EnvironmentObjects\EnvironmentObjects.csproj">
-      <Project>{18081514-d242-472a-9b37-13ca46057e5f}</Project>
-      <Name>EnvironmentObjects</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Genetic\Genetic.csproj">
-      <Project>{a8a3a037-00c9-4ae0-8a94-7045061d7433}</Project>
-      <Name>Genetic</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,43 @@
+c:\users\home\documents\visual studio 2015\Projects\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.exe.config
+c:\users\home\documents\visual studio 2015\Projects\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.exe
+c:\users\home\documents\visual studio 2015\Projects\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.pdb
+c:\users\home\documents\visual studio 2015\Projects\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.csprojResolveAssemblyReference.cache
+c:\users\home\documents\visual studio 2015\Projects\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.exe
+c:\users\home\documents\visual studio 2015\Projects\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.pdb
+C:\Users\Home\documents\visual studio 2015\Projects\Pacman DeepMind\Pacman DeepMind\bin\Debug\Genetic.dll
+C:\Users\Home\documents\visual studio 2015\Projects\Pacman DeepMind\Pacman DeepMind\bin\Debug\Genetic.pdb
+C:\Users\Home\documents\visual studio 2015\Projects\Pacman DeepMind\Pacman DeepMind\bin\Debug\EnvironmentObjects.dll
+C:\Users\Home\documents\visual studio 2015\Projects\Pacman DeepMind\Pacman DeepMind\bin\Debug\EnvironmentObjects.pdb
+H:\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.exe.config
+H:\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.exe
+H:\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.pdb
+C:\Users\Laurynas\Desktop\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.exe.config
+C:\Users\Laurynas\Desktop\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.exe
+C:\Users\Laurynas\Desktop\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.pdb
+C:\Users\Laurynas\Desktop\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.exe
+C:\Users\Laurynas\Desktop\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.pdb
+C:\Users\Laurynas\Desktop\Pacman DeepMind\Pacman DeepMind\bin\Debug\EnvironmentObjects.dll
+C:\Users\Laurynas\Desktop\Pacman DeepMind\Pacman DeepMind\bin\Debug\Genetic.dll
+C:\Users\Laurynas\Desktop\Pacman DeepMind\Pacman DeepMind\bin\Debug\EnvironmentObjects.pdb
+C:\Users\Laurynas\Desktop\Pacman DeepMind\Pacman DeepMind\bin\Debug\Genetic.pdb
+C:\Users\Laurynas\Desktop\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.exe.config
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.exe
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.pdb
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.exe
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.pdb
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\Pacman DeepMind\bin\Debug\EnvironmentObjects.dll
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\Pacman DeepMind\bin\Debug\Genetic.dll
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\Pacman DeepMind\bin\Debug\EnvironmentObjects.pdb
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\Pacman DeepMind\bin\Debug\Genetic.pdb
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.csprojResolveAssemblyReference.cache
+D:\VisualStudioProjects\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.exe.config
+D:\VisualStudioProjects\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.exe
+D:\VisualStudioProjects\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.pdb
+D:\VisualStudioProjects\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.exe
+D:\VisualStudioProjects\Pacman DeepMind\Pacman DeepMind\bin\Debug\Pacman DeepMind.pdb
+D:\VisualStudioProjects\Pacman DeepMind\Pacman DeepMind\bin\Debug\EnvironmentObjects.dll
+D:\VisualStudioProjects\Pacman DeepMind\Pacman DeepMind\bin\Debug\Genetic.dll
+D:\VisualStudioProjects\Pacman DeepMind\Pacman DeepMind\bin\Debug\EnvironmentObjects.pdb
+D:\VisualStudioProjects\Pacman DeepMind\Pacman DeepMind\bin\Debug\Genetic.pdb
+D:\VisualStudioProjects\Pacman DeepMind\Pacman DeepMind\obj\Debug\Pacman DeepMind.csprojResolveAssemblyReference.cache

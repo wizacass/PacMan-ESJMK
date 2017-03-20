@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Pacman DeepMind")]
+[assembly: AssemblyTitle("Genetic")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Pacman DeepMind")]
+[assembly: AssemblyProduct("Genetic")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2c31dd5d-b3ab-479d-afc9-6905beff6ff3")]
+[assembly: Guid("a8a3a037-00c9-4ae0-8a94-7045061d7433")]
 
 // Version information for an assembly consists of the following four values:
 //
