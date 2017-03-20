@@ -1,0 +1,10 @@
+C:\Users\Home\documents\visual studio 2015\Projects\Pacman DeepMind\EnvironmentObjects\bin\Debug\EnvironmentObjects.dll
+C:\Users\Home\documents\visual studio 2015\Projects\Pacman DeepMind\EnvironmentObjects\bin\Debug\EnvironmentObjects.pdb
+C:\Users\Home\documents\visual studio 2015\Projects\Pacman DeepMind\EnvironmentObjects\obj\Debug\EnvironmentObjects.dll
+C:\Users\Home\documents\visual studio 2015\Projects\Pacman DeepMind\EnvironmentObjects\obj\Debug\EnvironmentObjects.pdb
+C:\Users\Home\documents\visual studio 2015\Projects\Pacman DeepMind\EnvironmentObjects\obj\Debug\EnvironmentObjects.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\EnvironmentObjects\bin\Debug\EnvironmentObjects.dll
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\EnvironmentObjects\bin\Debug\EnvironmentObjects.pdb
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\EnvironmentObjects\obj\Debug\EnvironmentObjects.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\EnvironmentObjects\obj\Debug\EnvironmentObjects.dll
+C:\Users\Home\Desktop\IT\DeepMind_ESJMK\Pacman DeepMind\EnvironmentObjects\obj\Debug\EnvironmentObjects.pdb
